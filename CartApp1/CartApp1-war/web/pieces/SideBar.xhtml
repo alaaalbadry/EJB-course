@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+       
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+          
+           <div class="sidebar_section">
+
+                                <h2>Categories</h2>
+                                <ul class="category_list">
+                                    <li><a href="#">Duis porttitor</a></li>
+                                    <li><a href="#">Nullam ac tellus</a></li>
+                                    <li><a href="#">Praesent viverra</a></li>
+                                    <li><a href="#">Aenean molestie</a></li>
+                                    <li><a href="#">Nunc scelerisque</a></li>
+                                    <li><a href="#">Cras mattis ante</a></li>
+                                </ul>
+                            </div>  
+
+                            <div class="sidebar_section">
+
+                                <h2>Search</h2>
+                                <div id="search_box">
+                                    <form action="#" method="get">
+                                        <input type="text" value="Enter keyword here..." name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                                        <input type="submit" name="Search" value="Search" alt="Search" id="searchbutton" title="Search" />
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="cleaner"></div>
+        
+    </ui:composition>
+</html>

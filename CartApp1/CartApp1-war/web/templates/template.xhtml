@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Garden Template, Free CSS Layout</title>
+        <meta name="keywords" content="Garden Template, Free Layout, CSS, HTML, green, light blue, white" />
+        <meta name="description" content="Garden Template is a free CSS layout provided by TemplateMo.com" />
+        <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+        <script language="javascript" type="text/javascript">
+            function clearText(field)
+            {
+                if (field.defaultValue == field.value)
+                    field.value = '';
+                else if (field.value == '')
+                    field.value = field.defaultValue;
+            }
+        </script>
+        <ui:insert name="style"></ui:insert>
+        <ui:insert name="script"></ui:insert>
+    </h:head>
+    <h:body dir="#{dir}" >
+
+        <div id="templatemo_site_title_bar_wrapper">
+            <div id="templatemo_site_title_bar">
+                <ui:include src="/pieces/Header.xhtml"/>
+
+            </div> <!-- end of templatemo_site_title_bar -->
+        </div> <!-- end of templatemo_site_title_bar_wrapper -->
+
+        <div id="templatemo_menu_wrapper">
+            <ui:include src="/pieces/DefaultMenue.xhtml"/>
+
+        </div><!-- end of templatemo_menu_wrapper -->
+
+        <div id="templatemo_content_outter_wrapper">
+            <div id="templatemo_content_inner_wrapper">
+
+                <div id="templatemo_content_wrapper">
+                    <div id="templatemo_content">
+
+                        <div id="sidebar">
+                            <ui:include src="/pieces/SideBar.xhtml"/>
+
+
+                        </div> <!-- end of  sidebar -->
+
+                        <div id="content_column">
+
+
+                            <div class="section_w500">
+                                <h3><ui:insert name="title">Default Title </ui:insert></h3>
+                                <ui:insert name="content">Default Content </ui:insert>
+                            </div>
+
+
+                        </div> <!-- end of content_column -->
+
+                        <div class="cleaner"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cleaner"></div>
+
+        <div id="templatemo_footer_wrapper">
+            <ui:include src="/pieces/Footer.xhtml"/>
+        </div> <!-- end of templatemo_footer_wrapper -->
+    </h:body>
+</html>

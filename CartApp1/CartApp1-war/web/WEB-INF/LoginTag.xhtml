@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+    <ui:composition >
+
+        <h:form>
+            <table>
+                <tr>
+                    <td>name : </td>
+                    <td><h:inputText  value="#{cartBeanUI.name}" id="name" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>code : </td>
+                    <td><h:inputText value="#{cartBeanUI.code}" id="code"/>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        #{''}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><h:commandButton  value="Login" action="#{cartBeanUI.login()}"/></p>
+                    </td>
+
+                </tr>
+            </table>
+
+        </h:form>
+
+    </ui:composition>
+</html>

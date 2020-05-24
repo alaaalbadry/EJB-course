@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    
+<ui:composition template="/templates/template.xhtml">
+    <ui:define name="style">
+                <style>
+            .in{
+                border: none;
+                border-bottom: 1px solid #666;
+            }
+
+            .ct {   
+                border-collapse:collapse;
+                border:1px solid #000000;
+            }
+
+            .cth {
+                text-align:center;
+                background:none repeat scroll 0 0 #f9e3fb;
+                border-bottom:1px solid #000000;  
+                padding:2px;
+            }
+
+            .ctor {
+                text-align:center;
+                background:none repeat scroll 0 0 #e1adb5;	
+            }
+
+            .cter {
+                text-align:center;
+                background:none repeat scroll 0 0 #c56b7f;
+            }
+            .ctff{
+                text-align:center;
+                background:none repeat scroll 0 0 #f9e3fb;
+                border-bottom:1px solid #000000;  
+                padding:2px;
+            }
+        </style>
+    </ui:define>
+    <ui:define name="title">Customers List</ui:define>
+    <ui:define name="content">
+        <f:view>
+               <h:form id="formId" prependId="false">
+        <table>
+            <tr>
+                <td><h3>Name : </h3></td> 
+                <td><h3><h:outputText value="#{cartBeanUI.name}"/></h3></td> 
+            </tr>
+            <tr>
+               <td><h3>Code : </h3></td> 
+               <td><h3><h:outputText value="#{cartBeanUI.code}"/></h3></td>  
+            </tr>
+            <tr> 
+                <td><h:commandButton value="Logout" action="#{cartBeanUI.logout()}" /></td>  
+                <td><h:commandButton value="Checkout" action="result" /></td>
+            </tr>
+             <tr> 
+                 <td> <h:inputText class="in" value="#{cartBeanUI.title}" /></td>
+                 <td><h:commandButton value="Delete" action="#{cartBeanUI.removeBook()}" style="color: blue;border-bottom-width: 1px solid #000000;" /></td>
+                 <td><h:commandButton value="Add" action="#{cartBeanUI.addBook()}" /></td>
+          
+                                        <br/>
+            </tr>
+        </table>
+                     </h:form>
+ </f:view>
+    </ui:define>
+</ui:composition>
+</html>
